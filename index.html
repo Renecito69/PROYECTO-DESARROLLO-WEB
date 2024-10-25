@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOTOMAMI HUB</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1>MOTOMAMI HUB</h1>
+            <div>
+                <a href="#citas">Citas</a>
+                <a href="#talleres">Talleres</a>
+                <a href="#estado">Estado del Vehículo</a>
+                <a href="#cotizacion">Cotización</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container" id="citas">
+        <h2>Agendar Cita</h2>
+        <form action="#" method="POST">
+            <label for="nombre">Nombre del Cliente:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" required>
+
+            <label for="taller">Seleccione el Taller:</label>
+            <select id="taller" name="taller" required>
+                <option value="">Seleccione un taller</option>
+                <option value="El Jaguar">El Jaguar</option>
+                <option value="Andes Móvil">Andes Móvil</option>
+                <option value="Café Racing">Café Racing</option>
+                <option value="La Montaña Motors">La Montaña Motors</option>
+            </select>
+
+            <label for="fecha">Fecha de la Cita:</label>
+            <input type="date" id="fecha" name="fecha" required>
+
+            <input type="submit" value="Agendar Cita">
+        </form>
+    </section>
+
+    <section class="container" id="talleres">
+        <h2>Disponibilidad de Talleres</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre del Taller</th>
+                    <th>Especialidad</th>
+                    <th>Ubicación</th>
+                    <th>Disponibilidad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>El Jaguar</td>
+                    <td>Mecánica General</td>
+                    <td>Calle 5 #20-30</td>
+                    <td>Disponible</td>
+                </tr>
+                <tr>
+                    <td>Andes Móvil</td>
+                    <td>Pintura Automotriz</td>
+                    <td>Av. Los Cerros 15-50</td>
+                    <td>Ocupado</td>
+                </tr>
+                <tr>
+                    <td>Café Racing</td>
+                    <td>Reparación de Motores</td>
+                    <td>Carrera 10 #12-20</td>
+                    <td>Disponible</td>
+                </tr>
+                <tr>
+                    <td>La Montaña Motors</td>
+                    <td>Electricidad Automotriz</td>
+                    <td>Calle 40 #9-25</td>
+                    <td>Disponible</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="container" id="estado">
+        <h2>Consultar Estado del Vehículo</h2>
+        <form action="#" method="POST">
+            <label for="placa">Ingrese la Placa del Vehículo:</label>
+            <input type="text" id="placa" name="placa" required>
+
+            <input type="submit" value="Consultar Estado">
+        </form>
+
+        <div class="estado-vehiculo" id="estado-vehiculo" style="display: none;">
+            <h3 id="estado-mensaje"></h3>
+            <p id="fecha-entrega"></p>
+        </div>
+    </section>
+
+    <section class="container" id="cotizacion">
+        <h2>Obtener Cotización</h2>
+        <form action="#" method="POST">
+            <label for="servicio">Seleccione el Servicio:</label>
+            <select id="servicio" name="servicio" required>
+                <option value="">Seleccione un servicio</option>
+                <option value="Mecánica General">Mecánica General</option>
+                <option value="Pintura Automotriz">Pintura Automotriz</option>
+                <option value="Reparación de Motores">Reparación de Motores</option>
+                <option value="Electricidad Automotriz">Electricidad Automotriz</option>
+            </select>
+
+            <label for="vehiculo">Tipo de Vehículo:</label>
+            <input type="text" id="vehiculo" name="vehiculo" required>
+
+            <input type="submit" value="Obtener Cotización">
+        </form>
+
+        <div class="cotizacion" id="cotizacion-estimada" style="display: none;">
+            <h3>Cotización Estimada</h3>
+            <p id="cotizacion-mensaje"></p>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <p>&copy; 2024 RENECITO Y RAMITOS | <a href="#">Términos y Condiciones</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
